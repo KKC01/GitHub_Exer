@@ -1,22 +1,19 @@
 name: TEST111
 
-on: 
+on:
   push:
-  schedule:
-    - cron: '*/1 * * * *'
+
   workflow_dispatch:
-    inputs:
-      name:
-        description: 'Person to greet'
-        required: true
-        default: 'World '
 
 jobs:
   job-name:
     runs-on: ubuntu-latest
+
     steps:
-      - run: echo "TEST TEST" && echo 'hello, ${{ github.event.inputs.name}}!'
-      - uses: actions/checkout@v2
+      - run: echo "TEST TEST"
+
+      - uses: actions/checkout@v4
+
       - run: |
           ls -la
           cd .github/workflows/
