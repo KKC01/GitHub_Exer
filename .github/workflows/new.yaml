@@ -1,10 +1,15 @@
-name: test
+name: Slack Notify
 
-on: [pull_request]
+on:
+  push:
 
 jobs:
-  test:
+  notify:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo hello
+      - name: Send Slack
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{"text":"GitHub push detected"}' \
+          ${{ secrets.SLACK_TEST }}
