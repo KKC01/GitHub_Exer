@@ -11,5 +11,5 @@ jobs:
       - name: Send Slack
         run: |
           curl -X POST -H 'Content-type: application/json' \
-          --data '{"text":"GitHub push detected"}' \
+          --data '{"text":"Hello, World!!"}' \
           ${{ secrets.SLACK_TEST }}
