@@ -3,6 +3,6 @@ name :  learn
 on: [push]
 jobs:
   job-name:
-    runs-on:ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      -run: echo "this is pen"
+      - run: echo "this is pen"
