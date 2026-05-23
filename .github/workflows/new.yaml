@@ -1,14 +1,14 @@
 name: TEST111
 
 on: [push]
-schedule:
-  - cron: '*/1 * * * *'
-workflow_dispatch:
-  inputs:
-    name:
-      description: 'Person to greet'
-      required: true
-      default: 'World '
+  schedule:
+    - cron: '*/1 * * * *'
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: true
+        default: 'World '
 
 jobs:
   job-name:
