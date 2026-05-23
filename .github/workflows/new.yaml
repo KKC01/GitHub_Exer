@@ -1,20 +1,11 @@
-name: TEST111
+name: test
 
 on:
-  push:
-
   workflow_dispatch:
 
 jobs:
-  job-name:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "TEST TEST"
-
-      - uses: actions/checkout@v4
-
-      - run: |
-          ls -la
-          cd .github/workflows/
-          ls -la
+      - run: echo hello
