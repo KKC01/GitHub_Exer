@@ -1,0 +1,14 @@
+name: TEST111
+
+on: [push]
+
+jobs:
+  job-name:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "TEST TEST"
+      - uses: actions/checkout@v2
+      - run: |
+        ls -la
+        cd .github/workflows/
+        ls -la
